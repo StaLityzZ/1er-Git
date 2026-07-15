@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0d1117;
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== Logo ===== */
+img[alt="Logo du site"] {
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+}
+
+/* ===== Titre ===== */
+h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #4dd0e1;
+    text-align: center;
+}
+
+/* ===== Contenu principal ===== */
+main {
+    max-width: 600px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main p {
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+/* ===== Icônes réseaux sociaux ===== */
+main a img {
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+    border-radius: 6px;
+}
+
+main a img:hover {
+    transform: scale(1.15);
+}
+
+/* ===== Pied de page ===== */
+footer {
+    margin-top: auto;
+    padding-top: 30px;
+    font-size: 0.85rem;
+    color: #888888;
+    text-align: center;
+}
