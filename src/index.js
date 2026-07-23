@@ -1,8 +1,8 @@
 import gsap from 'gsap';
 
-const img = document.querySelector('.img');
+const reseaux = document.querySelector('.reseaux');
 zone.addEventListener('mousemove', (event) => {
-    const rect = img.getBoundingClientRect();
+    const rect = reseaux.getBoundingClientRect();
     const x = gsap.utils.mapRange(rect.left, rect.right, -rect.width / 2, rect.width / 2, event.clientX);
     const y = gsap.utils.mapRange(rect.top, rect.bottom, -rect.height / 2, rect.height / 2, event.clientY);
     
