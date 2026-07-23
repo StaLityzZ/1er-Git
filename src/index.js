@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-const reseaux = document.querySelector('.reseaux');
+const reseaux = document.querySelector('#reseaux');
 
 zone.addEventListener('mousemove', (event) => {
     const rect = reseaux.getBoundingClientRect();
