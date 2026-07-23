@@ -1,7 +1,9 @@
-function Animation() {
-    const strength = 0.4;
+import gsap from 'gsap';
 
-    document.querySelectorAll('.reseaux').forEach((link) => {
+const strength = 0.3;
+
+function initMagneticButtons() {
+    document.querySelectorAll('a.reseaux').forEach((link) => {
         link.addEventListener('mousemove', (event) => {
             const rect = link.getBoundingClientRect();
             const x = gsap.utils.mapRange(rect.left, rect.right, -rect.width / 2, rect.width / 2, event.clientX);
@@ -12,7 +14,7 @@ function Animation() {
                 y: y * strength,
                 duration: 0.4,
                 ease: 'power2.out',
-                overwrite: true
+                overwrite: 'auto'
             });
         });
 
@@ -22,8 +24,11 @@ function Animation() {
                 y: 0,
                 duration: 0.7,
                 ease: 'elastic.out(1, 0.4)',
-                overwrite: true
+                overwrite: 'auto'
             });
         });
     });
 }
+
+window.addEventListener('DOMContentLoaded', initMagneticButtons);
+

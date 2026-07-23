@@ -44,14 +44,21 @@ main p {
 }
 
 /* ===== Icônes réseaux sociaux ===== */
-main a img {
+main a.reseaux {
+    display: inline-block;
+    margin: 10px;
+    will-change: transform;
+}
+
+main a.reseaux img {
     margin-top: 10px;
     transition: transform 0.2s ease;
     border-radius: 6px;
+    display: block;
 }
 
-main a img:hover {
-    transform: scale(1.15);
+main a.reseaux:hover img {
+    transform: scale(1.05);
 }
 
 /* ===== Pied de page ===== */
