@@ -1,10 +1,11 @@
 import gsap from 'gsap';
 
+const img = document.querySelector('.img');
 zone.addEventListener('mousemove', (event) => {
-    const rect = zone.getBoundingClientRect();
+    const rect = img.getBoundingClientRect();
     const x = gsap.utils.mapRange(rect.left, rect.right, -rect.width / 2, rect.width / 2, event.clientX);
     const y = gsap.utils.mapRange(rect.top, rect.bottom, -rect.height / 2, rect.height / 2, event.clientY);
-
+    
     gsap.to(btn, {
         x: x * strength,
         y: y * strength,
