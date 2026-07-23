@@ -16,7 +16,16 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
+                type: 'javascript/auto',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        sourceType: 'unambiguous',
+                        presets: [
+                            ['@babel/preset-env', { modules: false }],
+                        ],
+                    },
+                },
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
@@ -37,6 +46,10 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, 'img'),
                     to: 'img',
+                },
+                {
+                    from: path.resolve(__dirname, 'style.css'),
+                    to: 'style.css',
                 },
             ],
         }),

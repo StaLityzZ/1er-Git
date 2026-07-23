@@ -5,6 +5,7 @@ const strength = 0.3;
 function initMagneticButtons() {
     document.querySelectorAll('a.reseaux').forEach((link) => {
         link.addEventListener('mousemove', (event) => {
+            console.log(event);
             const rect = link.getBoundingClientRect();
             const x = gsap.utils.mapRange(rect.left, rect.right, -rect.width / 2, rect.width / 2, event.clientX);
             const y = gsap.utils.mapRange(rect.top, rect.bottom, -rect.height / 2, rect.height / 2, event.clientY);
